@@ -5,9 +5,15 @@ Gomit [Golang Committer] | Beauty git commit using Go.
 ```
 --[ gomit ]--
 
-✨ : new        📝 : doc       ⏫ : up
-🛠 : fix 	    🔀 : merge     📦 : package
-🔨 : update 	⏬ : down      🚧 : working
+✨ : new
+📝 : doc
+⏫ : up
+🛠 : fix
+🔀 : merge
+📦 : package
+🔨 : update
+⏬ : down
+🚧 : working
 
 Usage :
 ./gomit -a=up -m='Create some function to file'
