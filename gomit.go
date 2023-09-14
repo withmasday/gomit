@@ -13,35 +13,35 @@ func commiter(action, message string) {
 		new.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '✨ %s : %s' \n", action, message)
 	case "FIX":
-		fix := exec.Command("git", "commit", "-m", "'🛠 FIX : "+ message);
+		fix := exec.Command("git", "commit", "-m", "🛠 FIX : "+ message);
 		fix.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '🛠 %s : %s' \n", action, message)
 	case "UPDATE":
-		update := exec.Command("git", "commit", "-m", "'🔨 UPDATE : "+ message);
+		update := exec.Command("git", "commit", "-m", "🔨 UPDATE : "+ message);
 		update.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '🔨 %s : %s' \n", action, message)
 	case "DOC":
-		doc := exec.Command("git", "commit", "-m", "'📝 DOC : "+ message);
+		doc := exec.Command("git", "commit", "-m", "📝 DOC : "+ message);
 		doc.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '📝 %s : %s' \n", action, message)
 	case "MERGE":
-		merge := exec.Command("git", "commit", "-m", "'🔀 MERGE : "+ message);
+		merge := exec.Command("git", "commit", "-m", "🔀 MERGE : "+ message);
 		merge.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '🔀 %s : %s' \n", action, message)
 	case "DOWN":
-		down := exec.Command("git", "commit", "-m", "'⏬ DOWN : "+ message);
+		down := exec.Command("git", "commit", "-m", "⏬ DOWN : "+ message);
 		down.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '⏬ %s : %s' \n", action, message)
 	case "UP":
-		up := exec.Command("git", "commit", "-m", "'⏫ UP : "+ message);
+		up := exec.Command("git", "commit", "-m", "⏫ UP : "+ message);
 		up.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '⏫ %s : %s' \n", action, message)
 	case "PACKAGE":
-		pkg := exec.Command("git", "commit", "-m", "'📦 PACKAGE : "+ message);
+		pkg := exec.Command("git", "commit", "-m", "📦 PACKAGE : "+ message);
 		pkg.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '📦 %s : %s' \n", action, message)
 	case "WORKING":
-		working := exec.Command("git", "commit", "-m", "'🚧 WORKING : "+ message);
+		working := exec.Command("git", "commit", "-m", "🚧 WORKING : "+ message);
 		working.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '🚧 %s : %s' \n", action, message)
 	default:
