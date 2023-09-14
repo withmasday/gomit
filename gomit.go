@@ -1,9 +1,11 @@
 package main
 
-import "flag"
-import "fmt"
-import "os/exec"
-import "strings"
+import (
+	"flag"
+	"fmt"
+	"os/exec"
+	"strings"
+)
 
 func commiter(action, message string) {
 	action = strings.ToUpper(action)
