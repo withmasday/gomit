@@ -9,34 +9,16 @@ func commiter(action, message string) {
 	action = strings.ToUpper(action)
 	switch action {
 	case "NEW":
-		exec.Command("git", "commit", "-m", "'✨ NEW : "+ message +"'");
 		fmt.Printf("[OKE] : git commit -m '✨ %s : %s' \n", action, message)
-	case "FIX":
-		exec.Command("git", "commit", "-m", "'🛠 FIX : "+ message +"'");
-		fmt.Printf("[OKE] : git commit -m '🛠 %s : %s' \n", action, message)
-	case "UPDATE":
-		exec.Command("git", "commit", "-m", "'🔨 UPDATE : "+ message +"'");
-		fmt.Printf("[OKE] : git commit -m '🔨 %s : %s' \n", action, message)
-	case "DOC":
-		exec.Command("git", "commit", "-m", "'📝 DOC : "+ message +"'");
-		fmt.Printf("[OKE] : git commit -m '📝 %s : %s' \n", action, message)
-	case "MERGE":
-		exec.Command("git", "commit", "-m", "'🔀 MERGE : "+ message +"'");
-		fmt.Printf("[OKE] : git commit -m '🔀 %s : %s' \n", action, message)
-	case "DOWN":
-		exec.Command("git", "commit", "-m", "'⏬ DOWN : "+ message +"'");
-		fmt.Printf("[OKE] : git commit -m '⏬ %s : %s' \n", action, message)
-	case "UP":
-		exec.Command("git", "commit", "-m", "'⏫ UP : "+ message +"'");
-		fmt.Printf("[OKE] : git commit -m '⏫ %s : %s' \n", action, message)
-	case "PACKAGE":
-		exec.Command("git", "commit", "-m", "'📦 PACKAGE : "+ message +"'");
-		fmt.Printf("[OKE] : git commit -m '📦 %s : %s' \n", action, message)
-	case "WORKING":
-		exec.Command("git", "commit", "-m", "'🚧 WORKING : "+ message +"'");
-		fmt.Printf("[OKE] : git commit -m '🚧 %s : %s' \n", action, message)
+		cmd := exec.Command("git", "commit", "-m", "✨ NEW : "+ message +"");
+		out, err := cmd.CombinedOutput()
+		if err != nil && err.Error() != "exit status 1" {
+		    fmt.Printf("issue failed with error: %s\n", err)
+		}
+
+		fmt.Printf("combined out:\n%s\n", string(out))
 	default:
-		fmt.Printf("[BAD] : git commit -m '🚧 %s : %s' \n", action, message)
+		fmt.Printf("\n ❌ : Error, commit action format failed.\n")
 	}
 }
 
