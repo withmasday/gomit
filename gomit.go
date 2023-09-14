@@ -9,7 +9,7 @@ func commiter(action, message string) {
 	action = strings.ToUpper(action)
 	switch action {
 	case "NEW":
-		new := exec.Command("git", "commit", "-m", "'✨ NEW : "+ message +"'");
+		new := exec.Command("git", "commit", "-m", "✨ NEW : "+ message);
 		new.CombinedOutput()
 		fmt.Printf("[OKE] : git commit -m '✨ %s : %s' \n", action, message)
 	case "FIX":
