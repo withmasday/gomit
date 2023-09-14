@@ -11,12 +11,7 @@ func commiter(action, message string) {
 	case "NEW":
 		fmt.Printf("[OKE] : git commit -m '✨ %s : %s' \n", action, message)
 		cmd := exec.Command("git", "commit", "-m", "✨ NEW : "+ message);
-		out, err := cmd.CombinedOutput()
-		if err != nil && err.Error() != "exit status 1" {
-		    fmt.Printf("issue failed with error: %s\n", err)
-		}
-
-		fmt.Printf("combined out:\n%s\n", string(out))
+		cmd.CombinedOutput()
 	default:
 		fmt.Printf("\n ❌ : Error, commit action format failed.\n")
 	}
